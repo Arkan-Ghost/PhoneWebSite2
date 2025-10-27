@@ -182,16 +182,28 @@
             display: none;
             cursor: pointer;
             font-size: 1.5rem;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .menu-toggle:hover {
+            transform: scale(1.1);
         }
 
         /* Hero Section */
         .hero {
-            background-image: url(index/phone1.png);
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             position: relative;
             overflow: hidden;
+            padding: 100px 0 50px;
         }
 
         .hero::before {
@@ -210,21 +222,31 @@
         }
 
         .hero-image {
-            background-image: url("./images/phone1.png");
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-            position: absolute;      
-            top: 55%;
-            margin-left: 50%;
+            position: absolute;
+            right: 0;
+            top: 50%;
             transform: translateY(-50%);
-            width: 32%;
-            height: 1000px;
+            width: 45%;
+            height: 80vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            right: 0;
-            top: 50%;
+        }
+
+        .phone-image {
+            width: 100%;
+            height: 100%;
+            background-image: url('./index/phone1.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
         }
 
          /* Limited Time Offer Section */
@@ -294,6 +316,14 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 5px;
+            color: var(--dark);
+        }
+
+        .countdown-finished {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin: 40px 0;
         }
 
         /* Section Opportunités */
@@ -667,20 +697,32 @@
             .hero-content {
                 width: 100%;
                 text-align: center;
-                padding-top: 100px;
+                padding-top: 0;
             }
             
             .hero-image {
                 position: relative;
                 width: 100%;
+                height: 400px;
                 transform: none;
                 margin-top: 50px;
+                top: auto;
+                right: auto;
+            }
+            
+            .phone-image {
+                background-size: contain;
+                background-position: center;
             }
             
             .hero {
                 height: auto;
                 padding: 120px 0 80px;
                 flex-direction: column;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
             }
             
             .video-container {
@@ -707,7 +749,7 @@
 
         @media (max-width: 768px) {
             .menu-toggle {
-                display: block;
+                display: flex;
             }
             
             .nav-links {
@@ -716,12 +758,14 @@
                 left: -100%;
                 width: 80%;
                 height: calc(100vh - 80px);
-                background-color: var(--samsung-dark);
+                background: linear-gradient(135deg, var(--dark), var(--primary));
                 flex-direction: column;
                 align-items: center;
                 padding-top: 50px;
                 transition: var(--transition);
-                box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+                box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+                z-index: 1000;
+                border-right: 2px solid var(--secondary);
             }
             
             .nav-links.active {
@@ -729,7 +773,19 @@
             }
             
             .nav-links li {
-                margin: 15px 0;
+                margin: 20px 0;
+            }
+            
+            .nav-links a {
+                font-size: 1.2rem;
+                padding: 10px 20px;
+                border-radius: 8px;
+                transition: all 0.3s ease;
+            }
+            
+            .nav-links a:hover {
+                background: rgba(0, 195, 255, 0.1);
+                transform: translateX(10px);
             }
             
             .countdown {
@@ -742,7 +798,7 @@
                 gap: 30px;
             }
             
-            .innovation-card {
+            .opportunity-card {
                 width: 100%;
                 max-width: 400px;
             }
@@ -751,21 +807,13 @@
                 display: none;
             }
             
-            .phone-container {
-                position: relative;
-                width: 300px;
-                height: 600px;
-                perspective: 1000px;
+            .hero-image {
+                height: 350px;
             }
-
-            .phone-container {
-            position: relative;
-            width: 300px;
-            height: 600px;
-            perspective: 1000px;
-        }
-
             
+            .phone-image {
+                background-size: contain;
+            }
         }
 
         @media (max-width: 576px) {
@@ -810,6 +858,22 @@
             .play-button i {
                 font-size: 1.5rem;
             }
+            
+            .hero-image {
+                height: 300px;
+                margin-top: 30px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -839,10 +903,33 @@
             .countdown-number {
                 font-size: 1.8rem;
             }
+            
+            .hero-image {
+                height: 250px;
+            }
+            
+            .nav-links {
+                width: 100%;
+            }
         }
 
-
-
+        @media (max-width: 360px) {
+            .hero-image {
+                height: 200px;
+            }
+            
+            .phone-image {
+                background-size: contain;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 0.9rem;
+            }
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -857,9 +944,9 @@
                     <ul class="nav-links">
                         <li><a href="#home">Home</a></li>
                         <li><a href="./Contact.html">Contact</a></li>
-                        <li><a href="#innovations">Innovations</a></li>
-                        <li><a href="#video">Discover</a></li>
-                        <li><a href="#offer">Pre-order</a></li>    
+                        <li><a href="About.html">About us</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li><a href="pre-order.html">Pre-order</a></li>    
                     </ul>
                     <div class="menu-toggle">
                         <i class="fas fa-bars"></i>
@@ -875,15 +962,12 @@
                     <h1>Galaxy S26 Ultra</h1>
                     <p>Discover the future of mobile technology with the Samsung Galaxy S26 Ultra. Featuring a 6.8-inch Dynamic AMOLED 2X display, Snapdragon 8 Gen 4 processor, and revolutionary camera system, it pushes the boundaries of innovation.</p>
                     <div class="hero-buttons">
-                        <a href="#offer" class="btn">Pre-order Now</a>
-                        <a href="#features" class="btn btn-outline">Learn More</a>
+                        <a href="pre-order.html" class="btn">Pre-order Now</a>
+                        <a href="#innovations" class="btn btn-outline">Learn More</a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <div class="phone-container">
-                        <div class="phone">
-                        </div>
-                    </div>
+                    <div class="phone-image"></div>
                 </div>
             </div>
         </section>
@@ -893,29 +977,29 @@
             <div class="container">
                 <div class="offer-content">
                     <span class="offer-tag">Limited Time Offer</span>
-                    <h2>Pre-order Your <span style="background: linear-gradient(135deg, var(--samsung-blue), var(--samsung-light-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Galaxy S26</span> Today</h2>
-                    <p style="color: var(--samsung-dark);">Be among the first to own Samsung's most advanced smartphone. Pre-order now and receive exclusive early-bird benefits including 20% discount and priority shipping.</p>
+                    <h2>Pre-order Your <span style="background: linear-gradient(135deg, var(--secondary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Galaxy S26</span> Today</h2>
+                    <p style="color: var(--dark);">Be among the first to own Samsung's most advanced smartphone. Pre-order now and receive exclusive early-bird benefits including 20% discount and priority shipping.</p>
                     
                     <div class="countdown">
                         <div class="countdown-item">
-                            <div class="countdown-number" id="days">01</div>
+                            <div class="countdown-number" id="days">07</div>
                             <div class="countdown-label">Days</div>
                         </div>
                         <div class="countdown-item">
-                            <div class="countdown-number" id="hours">12</div>
+                            <div class="countdown-number" id="hours">23</div>
                             <div class="countdown-label">Hours</div>
                         </div>
                         <div class="countdown-item">
-                            <div class="countdown-number" id="minutes">42</div>
+                            <div class="countdown-number" id="minutes">59</div>
                             <div class="countdown-label">Minutes</div>
                         </div>
                         <div class="countdown-item">
-                            <div class="countdown-number" id="seconds">36</div>
+                            <div class="countdown-number" id="seconds">59</div>
                             <div class="countdown-label">Seconds</div>
                         </div>
                     </div>
                     
-                    <a href="#" class="btn">Pre-order Now</a>
+                    <a href="pre-order.html" class="btn">Pre-order Now</a>
                 </div>
             </div>
         </section>
@@ -1058,8 +1142,8 @@
                         </div>
                     </div>
                     <div class="video-content">
-                        <h2>Discover the <span style="background: linear-gradient(135deg, var(--samsung-blue), var(--samsung-light-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Galaxy S26 Revolution</span></h2>
-                        <p style="color: var(--samsung-dark)">Watch our product demo to see how the Galaxy S26 Ultra transforms your mobile experience. With its advanced features and sleek design, it sets new benchmarks in the industry.</p>
+                        <h2>Discover the <span style="background: linear-gradient(135deg, var(--secondary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Galaxy S26 Revolution</span></h2>
+                        <p style="color: var(--dark)">Watch our product demo to see how the Galaxy S26 Ultra transforms your mobile experience. With its advanced features and sleek design, it sets new benchmarks in the industry.</p>
                         <ul class="video-features">
                             <li><i class="fas fa-check-circle"></i> Premium titanium and glass design</li>
                             <li><i class="fas fa-check-circle"></i> 2-day battery life with 5000mAh capacity</li>
@@ -1098,7 +1182,7 @@
                     <div class="footer-column">
                         <h4>Company</h4>
                         <ul class="footer-links">
-                            <li><a href="#">About Samsung</a></li>
+                            <li><a href="About.html">About Samsung</a></li>
                             <li><a href="#">Careers</a></li>
                             <li><a href="#">Press</a></li>
                             <li><a href="./Contact.html">Contact</a></li>
@@ -1107,7 +1191,7 @@
                     <div class="footer-column">
                         <h4>Support</h4>
                         <ul class="footer-links">
-                            <li><a href="#">Help Center</a></li>
+                            <li><a href="FAQ.html">Help Center</a></li>
                             <li><a href="#">Community</a></li>
                             <li><a href="#">Customer Service</a></li>
                             <li><a href="#">Warranty</a></li>
@@ -1128,6 +1212,8 @@
                 
                 menuToggle.addEventListener('click', function() {
                     navLinks.classList.toggle('active');
+                    // Animation du bouton menu
+                    this.classList.toggle('active');
                 });
 
                 // Header scroll effect
@@ -1139,6 +1225,51 @@
                         header.classList.remove('scrolled');
                     }
                 });
+
+                // CORRECTION DU COMPTE À REBOURS - VERSION FONCTIONNELLE
+                function updateCountdown() {
+                    const now = new Date();
+                    // Définir la date de fin (7 jours à partir de maintenant)
+                    const endDate = new Date(now);
+                    endDate.setDate(now.getDate() + 7);
+                    endDate.setHours(23, 59, 59, 999); // Fin à 23:59:59
+                    
+                    const timeLeft = endDate - now;
+                    
+                    // Si le temps est écoulé
+                    if (timeLeft <= 0) {
+                        document.getElementById('days').textContent = '00';
+                        document.getElementById('hours').textContent = '00';
+                        document.getElementById('minutes').textContent = '00';
+                        document.getElementById('seconds').textContent = '00';
+                        
+                        // Afficher un message d'expiration
+                        const countdownContainer = document.querySelector('.countdown');
+                        if (!document.querySelector('.countdown-finished')) {
+                            const finishedMessage = document.createElement('div');
+                            finishedMessage.className = 'countdown-finished';
+                            finishedMessage.textContent = 'Offre expirée !';
+                            countdownContainer.parentNode.insertBefore(finishedMessage, countdownContainer.nextSibling);
+                        }
+                        return;
+                    }
+                    
+                    // Calculer les jours, heures, minutes, secondes
+                    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                    
+                    // Mettre à jour l'affichage
+                    document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+                }
+                
+                // Démarrer le compte à rebours et le mettre à jour chaque seconde
+                setInterval(updateCountdown, 1000);
+                updateCountdown(); // Appel initial
 
                 // Carousel functionality
                 const track = document.querySelector('.carousel-track');

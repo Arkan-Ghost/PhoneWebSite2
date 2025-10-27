@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Samsung Galaxy S26 Ultra</title>
+    <style>
+        /* Variables CSS */
+        :root {
+            --primary: #0a1128;
+            --secondary: #00c3ff;
+            --accent: #7b42f6;
+            --dark: #001233;
+            --light: #f8f9fa;
+            --sober: #dae1e7;
+            --gray: #6c757d;
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--primary);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            color: white;
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 195, 255, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 195, 255, 0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--secondary);
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3, h4 {
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(10, 17, 40, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 15px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 150px 0 80px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--dark), var(--primary));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 70% 30%, rgba(0, 195, 255, 0.1), transparent 50%);
+        }
+
+        /* NOUVEAU: Image de fond pour la section FAQ */
+        .page-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Search Section */
+        .search-section {
+            background-color: var(--dark);
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .search-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 70%, rgba(123, 66, 246, 0.1), transparent 50%);
+        }
+
+        .search-container {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 18px 60px 18px 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            color: var(--light);
+            font-size: 1rem;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 2px rgba(0, 195, 255, 0.2);
+        }
+
+        .search-button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .search-button:hover {
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        /* FAQ Categories */
+        .categories-section {
+            background-color: var(--primary);
+            position: relative;
+        }
+
+        .categories-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 70% 30%, rgba(0, 195, 255, 0.1), transparent 50%);
+        }
+
+        .categories-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .category-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .category-card:hover, .category-card.active {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 195, 255, 0.2);
+            border-color: var(--secondary);
+        }
+
+        .category-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .category-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+
+        .category-count {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--dark);
+            position: relative;
+        }
+
+        .faq-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 70%, rgba(123, 66, 246, 0.1), transparent 50%);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .faq-category-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            color: var(--secondary);
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 10px 30px rgba(0, 195, 255, 0.1);
+        }
+
+        .faq-question {
+            padding: 25px;
+            background: transparent;
+            border: none;
+            width: 100%;
+            text-align: left;
+            color: var(--light);
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            color: var(--secondary);
+        }
+
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 25px 25px;
+            max-height: 500px;
+        }
+
+        .faq-icon {
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Contact CTA Section */
+        .contact-cta-section {
+            background: linear-gradient(135deg, var(--sober), var(--light));
+            color: var(--dark);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 70% 30%, rgba(0, 195, 255, 0.1), transparent 50%);
+        }
+
+        .contact-cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-cta-content h2 {
+            color: var(--dark);
+        }
+
+        .contact-cta-content p {
+            color: var(--dark);
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            transition: var(--transition);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .page-header {
+                padding: 130px 0 60px;
+            }
+            
+            .categories-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 80%;
+                height: calc(100vh - 80px);
+                background-color: var(--primary);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 50px;
+                transition: var(--transition);
+                box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .faq-question {
+                padding: 20px;
+                font-size: 1.1rem;
+            }
+            
+            .category-card {
+                padding: 25px 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .page-header {
+                padding: 120px 0 50px;
+            }
+            
+            .faq-question {
+                padding: 18px;
+            }
+            
+            .faq-answer {
+                padding: 0 18px;
+            }
+            
+            .faq-item.active .faq-answer {
+                padding: 0 18px 18px;
+            }
+            
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .search-input {
+                padding: 15px 50px 15px 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span>Samsung</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="About.html">About us</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="preorder.html">Pre-order</a></li>    
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Frequently Asked Questions</h1>
+                <p>Find answers to the most common questions about the Samsung Galaxy S26 Ultra. Can't find what you're looking for? Contact our support team.</p>
+                <a href="#search" class="btn">Search Questions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section" id="search">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="Search for answers...">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="categories-container">
+                <h2>Browse by Category</h2>
+                <div class="categories-grid">
+                    <div class="category-card active" data-category="general">
+                        <div class="category-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="category-title">General</h3>
+                        <p class="category-count">12 questions</p>
+                    </div>
+                    <div class="category-card" data-category="preorder">
+                        <div class="category-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3 class="category-title">Pre-order</h3>
+                        <p class="category-count">8 questions</p>
+                    </div>
+                    <div class="category-card" data-category="specifications">
+                        <div class="category-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3 class="category-title">Specifications</h3>
+                        <p class="category-count">10 questions</p>
+                    </div>
+                    <div class="category-card" data-category="mods">
+                        <div class="category-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <h3 class="category-title">Modular Features</h3>
+                        <p class="category-count">7 questions</p>
+                    </div>
+                    <div class="category-card" data-category="shipping">
+                        <div class="category-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3 class="category-title">Shipping & Delivery</h3>
+                        <p class="category-count">5 questions</p>
+                    </div>
+                    <div class="category-card" data-category="support">
+                        <div class="category-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="category-title">Support</h3>
+                        <p class="category-count">6 questions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-container">
+                <!-- General Questions -->
+                <div class="faq-category" id="general">
+                    <h2 class="faq-category-title">General Questions</h2>
+                    
+                    <div class="faq-item active">
+                        <button class="faq-question">
+                            What makes the Galaxy S26 Ultra different from previous models?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The Galaxy S26 Ultra introduces revolutionary features including:</p>
+                            <ul>
+                                <li>Advanced modular system with interchangeable components</li>
+                                <li>Under-display camera technology for a truly bezel-less display</li>
+                                <li>Next-generation AI processor with dedicated neural processing unit</li>
+                                <li>100W fast charging capability</li>
+                                <li>6G connectivity support</li>
+                                <li>Enhanced S-Pen with reduced latency and new gesture controls</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            When will the Galaxy S26 Ultra be released?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The Samsung Galaxy S26 Ultra is scheduled for release in March 2025. Pre-orders will begin in February 2025 with exclusive early-bird benefits for those who pre-order.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What colors will be available for the Galaxy S26 Ultra?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The Galaxy S26 Ultra will be available in the following premium finishes:</p>
+                            <ul>
+                                <li>Phantom Black</li>
+                                <li>Cosmic Silver</li>
+                                <li>Emerald Green</li>
+                                <li>Burgundy Red</li>
+                                <li>Sky Blue (Exclusive online color)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Is the Galaxy S26 Ultra water-resistant?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, the Galaxy S26 Ultra features an IP68 rating, meaning it is dust-tight and can be submerged in up to 1.5 meters of freshwater for up to 30 minutes. However, this rating does not apply when using modular attachments.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pre-order Questions -->
+                <div class="faq-category" id="preorder" style="display: none;">
+                    <h2 class="faq-category-title">Pre-order Questions</h2>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How can I pre-order the Galaxy S26 Ultra?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You can pre-order the Galaxy S26 Ultra through the following channels:</p>
+                            <ul>
+                                <li>Samsung's official website</li>
+                                <li>Authorized Samsung retailers</li>
+                                <li>Carrier partners (check with your local provider)</li>
+                                <li>Samsung Experience Stores</li>
+                            </ul>
+                            <p>Pre-orders will open in February 2025 with special early-bird bonuses.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What are the pre-order benefits?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Customers who pre-order the Galaxy S26 Ultra will receive:</p>
+                            <ul>
+                                <li>20% discount on the retail price</li>
+                                <li>Free Galaxy Buds3 Pro (valued at $249)</li>
+                                <li>Priority shipping (receive your device up to 3 days before official release)</li>
+                                <li>Exclusive access to limited edition colors</li>
+                                <li>1-year extended warranty at no additional cost</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Can I cancel my pre-order?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, you can cancel your pre-order at any time before the device ships. Once your order has been processed for shipping, standard return policies will apply. Please note that cancellation policies may vary depending on the retailer or carrier.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Specifications Questions -->
+                <div class="faq-category" id="specifications" style="display: none;">
+                    <h2 class="faq-category-title">Specifications Questions</h2>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What is the battery capacity of the Galaxy S26 Ultra?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The Galaxy S26 Ultra features a 5000mAh intelligent battery with AI-powered optimization. With the optional Power-Mod attachment, you can extend this to 9700mAh for all-day heavy usage without needing to recharge.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What processor does the Galaxy S26 Ultra use?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The Galaxy S26 Ultra is powered by the next-generation Snapdragon 8 Gen 4 processor with an integrated AI Neural Processing Unit. This provides up to 40% better performance and 35% improved power efficiency compared to previous generations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What is the display specification?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The Galaxy S26 Ultra features a 6.8-inch Dynamic AMOLED 2X display with:</p>
+                            <ul>
+                                <li>3200 x 1440 resolution (QHD+)</li>
+                                <li>120Hz adaptive refresh rate (1-120Hz)</li>
+                                <li>240Hz touch sampling rate</li>
+                                <li>2500 nits peak brightness</li>
+                                <li>Under-display front camera technology</li>
+                                <li>Corning Gorilla Glass Victus 3 protection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modular Features Questions -->
+                <div class="faq-category" id="mods" style="display: none;">
+                    <h2 class="faq-category-title">Modular Features Questions</h2>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How does the modular system work?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The Galaxy S26 Ultra features a revolutionary magnetic modular system that allows you to attach various functional modules to enhance your phone's capabilities. Modules simply snap onto the back of the device and connect via a proprietary high-speed data and power interface.</p>
+                            <p>Available modules include:</p>
+                            <ul>
+                                <li>Power-Mod (4700mAh additional battery)</li>
+                                <li>Camera-Mod (enhanced zoom and sensor capabilities)</li>
+                                <li>Printer-Mod (instant photo printing)</li>
+                                <li>Security-Mod (hardware encryption)</li>
+                                <li>Satellite-Mod (global connectivity)</li>
+                                <li>VR-Mod (virtual reality optimization)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Are the modules sold separately?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, all modular attachments are sold separately. However, pre-order bundles may include one module of your choice at a discounted price. Individual modules will be available for purchase through Samsung's official website and authorized retailers.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Is the phone waterproof with modules attached?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No, the IP68 water and dust resistance rating only applies to the phone itself without any modules attached. When using modular attachments, we recommend avoiding exposure to water or dust to prevent damage to the connection interface.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Shipping Questions -->
+                <div class="faq-category" id="shipping" style="display: none;">
+                    <h2 class="faq-category-title">Shipping & Delivery Questions</h2>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            When will pre-orders ship?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Pre-orders will begin shipping in early March 2025. Customers who pre-order will receive their devices up to 3 days before the official retail release date. You will receive a tracking notification via email once your order has shipped.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What shipping options are available?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We offer several shipping options:</p>
+                            <ul>
+                                <li>Standard Shipping (5-7 business days) - Free</li>
+                                <li>Expedited Shipping (2-3 business days) - $15</li>
+                                <li>Priority Shipping (1 business day) - $25 (Free for pre-orders)</li>
+                                <li>Same-day Delivery (select metropolitan areas) - $35</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Support Questions -->
+                <div class="faq-category" id="support" style="display: none;">
+                    <h2 class="faq-category-title">Support Questions</h2>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What warranty comes with the Galaxy S26 Ultra?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The Galaxy S26 Ultra comes with a standard 1-year manufacturer's warranty that covers defects in materials and workmanship. Pre-order customers receive an additional 1-year extended warranty at no extra cost. Modular attachments have their own 6-month warranty.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How can I get technical support?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Samsung offers multiple support channels:</p>
+                            <ul>
+                                <li>24/7 Phone Support: +82-31-200-1234</li>
+                                <li>Live Chat: Available on Samsung's website</li>
+                                <li>Email Support: support@samsung.com</li>
+                                <li>Samsung Members App: Community support and troubleshooting</li>
+                                <li>Samsung Experience Stores: In-person assistance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="contact-cta-section">
+        <div class="container">
+            <div class="contact-cta-content">
+                <h2>Still Have Questions?</h2>
+                <p>Our support team is available 24/7 to help you with any additional questions about the Galaxy S26 Ultra.</p>
+                <a href="Contact.html" class="btn">Contact Support</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Samsung</h4>
+                    <p>Push the boundaries of innovation with the Galaxy S26 Ultra. The future of mobile technology starts here.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Galaxy S26 Ultra</a></li>
+                        <li><a href="#">Galaxy S26+</a></li>
+                        <li><a href="#">Galaxy S26</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="About.html">About Samsung</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Customer Service</a></li>
+                        <li><a href="#">Warranty</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Samsung Electronics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+
+            // Header scroll effect
+            window.addEventListener('scroll', function() {
+                const header = document.getElementById('header');
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // FAQ functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Close all other items in the same category
+                    const category = item.closest('.faq-category');
+                    const categoryItems = category.querySelectorAll('.faq-item');
+                    
+                    categoryItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Category switching
+            const categoryCards = document.querySelectorAll('.category-card');
+            const faqCategories = document.querySelectorAll('.faq-category');
+            
+            categoryCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const categoryId = this.getAttribute('data-category');
+                    
+                    // Update active category card
+                    categoryCards.forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show selected category, hide others
+                    faqCategories.forEach(category => {
+                        if (category.id === categoryId) {
+                            category.style.display = 'block';
+                        } else {
+                            category.style.display = 'none';
+                        }
+                    });
+                    
+                    // Scroll to FAQ section
+                    document.querySelector('.faq-section').scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
+            });
+
+            // Search functionality
+            const searchInput = document.querySelector('.search-input');
+            const searchButton = document.querySelector('.search-button');
+            
+            function performSearch() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                
+                if (searchTerm === '') {
+                    // If search is empty, show all questions
+                    faqItems.forEach(item => {
+                        item.style.display = 'block';
+                    });
+                    return;
+                }
+                
+                // Search through all FAQ items
+                let foundResults = false;
+                
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question').textContent.toLowerCase();
+                    const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                    
+                    if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                        item.style.display = 'block';
+                        foundResults = true;
+                        
+                        // Expand matching items
+                        item.classList.add('active');
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Show all categories when searching
+                if (searchTerm !== '') {
+                    faqCategories.forEach(category => {
+                        category.style.display = 'block';
+                    });
+                }
+                
+                // If no results found, show message
+                if (!foundResults && searchTerm !== '') {
+                    const noResults = document.createElement('div');
+                    noResults.className = 'no-results';
+                    noResults.innerHTML = `<p style="text-align: center; padding: 40px; color: rgba(255,255,255,0.7);">No results found for "${searchTerm}". Try different keywords or <a href="Contact.html" style="color: var(--secondary);">contact our support team</a>.</p>`;
+                    
+                    // Remove previous no results message if exists
+                    const existingNoResults = document.querySelector('.no-results');
+                    if (existingNoResults) {
+                        existingNoResults.remove();
+                    }
+                    
+                    document.querySelector('.faq-container').appendChild(noResults);
+                } else {
+                    // Remove no results message if it exists
+                    const existingNoResults = document.querySelector('.no-results');
+                    if (existingNoResults) {
+                        existingNoResults.remove();
+                    }
+                }
+            }
+            
+            searchButton.addEventListener('click', performSearch);
+            searchInput.addEventListener('keyup', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        navLinks.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
